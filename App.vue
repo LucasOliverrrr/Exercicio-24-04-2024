@@ -227,12 +227,27 @@ watch(todoId, fetchData)
 </template>
 -->
 
+
+<!--
 <script setup>
 import ChildComp from './ChildComp.vue'
 </script>
 
 <template>
   <ChildComp />
+</template>
+-->
+
+
+<script setup>
+import { ref } from 'vue'
+import ChildComp from './ChildComp.vue'
+
+const greeting = ref('Hello from parent')
+</script>
+
+<template>
+  <ChildComp :msg="greeting" />
 </template>
 
 
