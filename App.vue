@@ -253,7 +253,7 @@ const greeting = ref('Hello from parent')
 -->
 
 
-
+<!--
 <script setup>
 import { ref } from 'vue'
 import ChildComp from './ChildComp.vue'
@@ -264,6 +264,20 @@ const childMsg = ref('No child msg yet')
 <template>
   <ChildComp @response="(msg) => childMsg = msg" />
   <p>{{ childMsg }}</p>
+</template>
+-->
+
+
+
+<script setup>
+import { ref } from 'vue'
+import ChildComp from './ChildComp.vue'
+
+const msg = ref('from parent')
+</script>
+
+<template>
+  <ChildComp>Message: {{ msg }}</ChildComp>
 </template>
 
 
