@@ -125,6 +125,8 @@ function removeTodo(todo) {
 </template>
 -->
 
+
+<!--
 <script setup>
 import { ref, computed } from 'vue'
 
@@ -176,3 +178,19 @@ function removeTodo(todo) {
   text-decoration: line-through;
 }
 </style>
+-->
+
+<script setup>
+import { onMounted } from "vue"
+import { ref } from 'vue'
+
+const pElementRef = ref(null)
+
+onMounted(() => {
+    pElementRef.value.textContent = "mounted!"
+})
+</script>
+
+<template>
+  <p ref="pElementRef">hello</p>
+</template>
