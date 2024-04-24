@@ -199,7 +199,7 @@ onMounted(() => {
 -->
 
 
-
+<!--
 <script setup>
 import { ref, watch } from 'vue'
 
@@ -224,6 +224,15 @@ watch(todoId, fetchData)
   <button @click="todoId++" :disabled="!todoData">Fetch next todo</button>
   <p v-if="!todoData">Loading...</p>
   <pre v-else>{{ todoData }}</pre>
+</template>
+-->
+
+<script setup>
+import ChildComp from './ChildComp.vue'
+</script>
+
+<template>
+  <ChildComp />
 </template>
 
 
